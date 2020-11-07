@@ -13,8 +13,7 @@ const Product = ({ getProducts, data }) => {
 
         <div className="Product__Section">
             {data.length !== 0 ? (data.map((item, index) => {
-                const { flight_number, mission_name, launch_success, launch_year, links, rocket } = item;
-
+                const { flight_number, mission_name, launch_success, launch_year, links, rocket, mission_id } = item;
                 return (
                     <div className="Each__Product__Wrapper" key={index}>
                         <div className="Product__Img"><img src={links.mission_patch} alt="" /></div>
@@ -22,7 +21,7 @@ const Product = ({ getProducts, data }) => {
                             <div className="MisssionName__FighterNumber">{mission_name} # {flight_number}</div>
                             <div className="Mission__Ids Product__Tabular_Txt">
                                 <div>Mission Ids:</div>
-                                <div>{'' + links.mission_id + ''}</div>
+                                <div>{mission_id[0] ? mission_id[0] : 'Null'}</div>
                             </div>
 
                             <div className="Mission__Ids Product__Tabular_Txt">
@@ -31,11 +30,11 @@ const Product = ({ getProducts, data }) => {
                             </div>
                             <div className="Mission__Ids Product__Tabular_Txt">
                                 <div>Successful Launch:</div>
-                                <div>{'' + launch_success + ''}</div>
+                                <div>{'' + launch_success}</div>
                             </div>
                             <div className="Mission__Ids Product__Tabular_Txt">
                                 <div>Successful <br></br>Landing:</div>
-                                <div>{'' + rocket.first_stage.cores[0].land_success + ''}</div>
+                                <div>{'' + rocket.first_stage.cores[0].land_success}</div>
                             </div>
                         </div>
                     </div>)
