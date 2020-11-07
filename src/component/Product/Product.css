@@ -1,0 +1,26 @@
+.Product__Section{width:100%; display: flex;
+    flex-direction: row; flex-wrap: wrap;}
+.Each__Product__Wrapper{width: 23%;
+    margin: 10px 5px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px 20px;
+    box-sizing: border-box;}
+.Each__Product__Wrapper>div{display: block; width:100%;}
+.Product__Img{text-align: center; background:#ccc;}
+.Product__Img img{width:70%;}
+.Product__Details{padding:10px 0px; font-size: 1.3em;}
+
+/*text css*/
+.MisssionName__FighterNumber{color:rgb(19, 38, 216); font-weight: 700; padding-bottom: 15px;}
+.Product__Tabular_Txt{width:100%; display: flex; flex-direction: row; flex-wrap: wrap; padding:8px 0px;}
+.Product__Tabular_Txt div:nth-child(1){ flex:50%; color:#000; font-weight: 700;}
+.Product__Tabular_Txt div:nth-child(2){flex:50%; color:#ccc; font-weight: 700; }
+.Product_Notfound{width:100%; padding:10px 10px; margin: 10px 5px; background: #fff; border-radius: 5px;}   
+@media only screen and (max-width: 1024px) and (min-width:701px){
+.Each__Product__Wrapper{ width: 47%;  margin: 10px 5px;}
+}
+
+@media only screen and (max-width: 700px){
+    .Each__Product__Wrapper{width:98%;  margin:10px 5px;}
+}
